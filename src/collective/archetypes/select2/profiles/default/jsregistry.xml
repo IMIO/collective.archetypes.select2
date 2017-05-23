@@ -3,7 +3,6 @@
 
     <javascript
         id="++resource++collective.archetypes.select2.js"
-        insert-after="++resource++plone.app.jquery.js"
         cacheable="True"
         compression="none"
         cookable="True"
