@@ -118,7 +118,7 @@ class Select2Widget(BaseWidget):
     def process_form(self, instance, field, form, empty_marker=None):
         value = form.get(field.getName(), empty_marker)
         if value is empty_marker:
-            return empty_marker
+            return empty_marker, {}
         if self.multiple and isinstance(value, basestring):
             value = value.strip().split(self.separator)
         return value, {}
