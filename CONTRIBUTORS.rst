@@ -1,4 +1,5 @@
 Contributors
 ============
 
-- FBruynbroeck, francois@affinitic.be
+- FBruynbroeck [Affinitic], francois@affinitic.be
+- Martin Peeters [Affinitic]
