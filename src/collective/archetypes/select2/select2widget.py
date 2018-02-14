@@ -123,9 +123,30 @@ class Select2Widget(BaseWidget):
             value = value.strip().split(self.separator)
         return value, {}
 
+
+class MultiSelect2Widget(Select2Widget):
+
+    _properties = Select2Widget._properties.copy()
+    _properties.update({
+        'pattern': 'select2',
+        'pattern_options': {},
+        'separator': ';',
+        'multiple': True,
+        'orderable': False,
+    })
+
+
 registerWidget(
     Select2Widget,
     title='Select2 widget',
     description=('Select2 widget'),
     used_for=('Products.Archetypes.Field.SelectField',)
+)
+
+
+registerWidget(
+    MultiSelect2Widget,
+    title='Muli Select2 widget',
+    description=('Multi Select2 widget'),
+    used_for=('Products.Archetypes.Field.LinesField',)
 )
