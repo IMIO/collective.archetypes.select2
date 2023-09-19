@@ -1,6 +1,8 @@
 # encoding: utf-8
+
 from copy import deepcopy
 from lxml import etree
+
 import json
 
 
@@ -200,6 +202,8 @@ class SelectWidget(BaseWidget):
         for token, title in value:
             option = etree.SubElement(self.el, 'option')
             option.attrib['value'] = token
+            if isinstance(title, str):
+                title = title.decode("utf8")
             option.text = title
 
     def _del_items(self):
